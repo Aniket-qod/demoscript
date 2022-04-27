@@ -1,3 +1,4 @@
+clear
 echo "\n"
 echo "*********************  Taking the pull  ***********************" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
 echo "\n"
@@ -12,9 +13,10 @@ echo "\n"
 git status
 
 echo "\n"
+echo "******************** Add the files for commit **********************" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
 echo "\n"
 
-read -p "Enter the file which want to commit ==>" file
+read -p "Enter the file which want to commit ==> " file
 
 echo "\n"
 echo "******************** Selected file for commit **********************" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
@@ -38,7 +40,7 @@ echo "\n"
 echo "******************* Commit code with message ************************" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
 echo "\n"
 
-read -p "Enter the message for committing code  ==>"  message
+read -p "Enter the message for committing code  ==> " message
 
 git commit -m  "$message"
 
