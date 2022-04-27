@@ -1,43 +1,46 @@
 clear
+heading_color='\033[1;91m'
+text_color='\033[0;96m'
+NC='\033[0m'
 echo "\n"
-echo "*********************  Taking the pull  ***********************" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
+echo "${heading_color}*********************  Taking the pull  ***********************${text_color}" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
 echo "\n"
 
 git branch
 git pull
 
 echo "\n"
-echo "********************* See the Modified File ***********************" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
+echo "${heading_color}********************* See the Modified File ***********************${text_color}" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
 echo "\n"
 
 git status
 
 echo "\n"
-echo "******************** Add the files for commit **********************" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
+echo "${heading_color}******************** Add the files for commit **********************${text_color}" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
 echo "\n"
 
 read -p "Enter the file which want to commit ==> " file
 
 echo "\n"
-echo "******************** Selected file for commit **********************" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
+echo "${heading_color}******************** Selected file for commit **********************${text_color}" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
 echo "\n"
 
 echo $file
 
 echo "\n"
-echo "******************* Adding files for commit ************************" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
+echo "${heading_color}******************* Adding files for commit ************************${text_color}" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
 echo "\n"
 
 git add $file
 
 echo "\n"
-echo "******************* Added files for commit  ***********************" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
+echo "${heading_color}******************* Added files for commit  ***********************${text_color}" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
 echo "\n"
 
 git status
 
 echo "\n"
-echo "******************* Commit code with message ************************" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
+echo "${heading_color}******************* Commit code with message ************************${text_color}" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
 echo "\n"
 
 read -p "Enter the message for committing code  ==> " message
@@ -45,13 +48,13 @@ read -p "Enter the message for committing code  ==> " message
 git commit -m  "$message"
 
 echo "\n"
-echo "*********************  Push code on git  **************************" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
+echo "${heading_color}*********************  Push code on git  **************************${text_color}" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
 echo "\n"
 
 git push
 
 echo "\n"
-echo "********************* Code is Committed Successfully ************************" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
+echo "${heading_color}********************* Code is Committed Successfully ************************${text_color}" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
 echo "\n"
 
 
