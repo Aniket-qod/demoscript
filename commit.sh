@@ -20,7 +20,7 @@ echo "\n"
 echo "******************** Selected file for commit **********************" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
 echo "\n"
 
-git $file
+echo $file
 
 echo "\n"
 echo "******************* Adding files for commit ************************" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
