@@ -3,7 +3,13 @@ heading_color='\033[1;91m'
 text_color='\033[0;96m'
 NC='\033[0m'
 
-echo "\033[33;5mSTART TO COMMIT THE CODE\033[0m" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
+echo "\n"
+echo "\n"
+echo "\033[96;5mSTART TO COMMIT THE CODE\033[0m${NC}" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
+echo "\n"
+
+sleep 5
+
 echo "\n"
 echo "${heading_color}*********************  Taking the pull  ***********************${text_color}" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
 echo "\n"
