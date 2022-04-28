@@ -41,7 +41,7 @@ echo "\n"
 echo "\n"
 
 count=0
-total=75
+total=50
 pstr="[=================================================]"
 
 while [ $count -lt $total ]; do
