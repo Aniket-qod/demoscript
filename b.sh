@@ -50,7 +50,7 @@ progreSh() {
     done
 }
 
-printf "\n\n\n\n\n\n\n\n\n\n"
+printf "\n\n"
 progreSh 0
 progreSh 10
 progreSh 20
@@ -62,7 +62,7 @@ progreSh 70
 progreSh 80
 progreSh 90
 progreSh 100
-printf "\n\n\n\n\n\n\n\n\n\n"
+printf "\n\n"
 
 
 
@@ -79,22 +79,6 @@ printf "\n\n\n\n\n\n\n\n\n\n"
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-echo "\n"
-echo "\n
 
 
 
