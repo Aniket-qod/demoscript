@@ -30,17 +30,16 @@ echo "\n"
 read -p "Enter the file which want to commit ==> " file
 
 echo "\n"
-echo "${heading_color}******************* Adding files for commit ************************${NC}${text_color}" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
+echo "${heading_color}******************* Selected files for commit ************************${NC}${text_color}" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
 echo "\n"
 
-echo $file
-git add $file
+git status
 
 echo "\n"
 echo "${heading_color}******************* Added files for commit  ***********************${NC}${text_color}" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
 echo "\n"
 
-git status
+git add $file
 
 echo "\n"
 echo "${heading_color}******************* Commit code with message ************************${NC}${text_color}" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
