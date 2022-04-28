@@ -41,8 +41,8 @@ echo "\n"
 echo "\n"
 
 count=0
-total=25
-pstr="[==================================]"
+total=75
+pstr="[=================================================]"
 
 while [ $count -lt $total ]; do
   sleep 0.5 # this is work
