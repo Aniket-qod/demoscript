@@ -1,1 +1,1 @@
-xnckaasaksalk# demoscript
+# demoscript
