@@ -77,3 +77,4 @@ git push
 echo "\n"
 echo "${heading_color}********************* Code is Committed Successfully ************************${NC}${text_color}" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
 echo "\n"
+
