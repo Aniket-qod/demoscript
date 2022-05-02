@@ -24,7 +24,7 @@ echo "\n"
 git status
 
 echo "\n"
-echo "${heading_color}******************** Add the files for commit **********************${text_color}" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
+echo "${heading_color}******************** Add the files for commit **********************${NC}${text_color}" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
 echo "\n"
 
 read -p "Enter the file which want to commit ==> " file
