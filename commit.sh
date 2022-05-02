@@ -11,7 +11,7 @@ echo "\n"
 sleep 5
 
 echo "\n"
-echo "${heading_color}*********************  Taking the pull  ***********************${text_color}" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
+echo "${heading_color}*********************  Taking the pull  ***********************${NC}${text_color}" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
 echo "\n"
 
 git branch
