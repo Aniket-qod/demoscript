@@ -1,6 +1,6 @@
 clear
 heading_color='\033[3;1;91m'
-text_color='\033[3;96m'
+text_color='\033[3;2;96m'
 NC='\033[0m'
 
 echo "\n"
