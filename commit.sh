@@ -107,6 +107,6 @@ echo "${text_color}"
 git push
 
 echo "\n"
-echo "${heading_color}********************* Code is Committed Successfully *********************" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
+echo "${heading_color}********************* Code is Committed Successfully ********************* \U1F984 \U1F984 \U1F984" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
 echo "\n"
 
