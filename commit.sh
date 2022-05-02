@@ -42,7 +42,6 @@ echo "Selected file =====> " $file
 echo "\n"
 echo "${heading_color}*********************     Adding files for commit    *********************" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
 echo "\n"
-echo "\n"
 echo "${text_color}"
 
 count=0
