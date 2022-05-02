@@ -1,9 +1,33 @@
 clear
-heading_color='\033[1;91m'
-text_color='\033[0;96m'
+heading_color='\033[3;1;91m'
+text_color='\033[3;96m'
 NC='\033[0m'
 
 echo "\n"
+
+spinner() {
+    local PROC="$1"
+    local str="${2:-'Script is preparing for the commit ...........☆'}"
+    local delay="0.9"
+    tput civis  # hide cursor
+    printf "\033[3;1;92m"
+    while [ -d /proc/$PROC ]; do
+        printf '\033[s\033[u Script is preparing for the commit [ .......................................... / ] %s\033[u'; sleep "$delay"
+        printf '\033[s\033[u Script is preparing for the commit [ .......................................... — ] %s\033[u'; sleep "$delay"
+        printf '\033[s\033[u Script is preparing for the commit [ .......................................... \ ] %s\033[u'; sleep "$delay"
+        printf '\033[s\033[u Script is preparing for the commit [ .......................................... | ] %s\033[u'; sleep "$delay"
+    done
+    printf '\033[s\033[u%*s\033[u\033[0m' $((${#str}+6)) " "  # return to normal
+    tput cnorm  # restore cursor
+    return 0
+}
+
+## simple example with sleep
+sleep 5 &
+
+spinner $!
+
+
 echo "\033[96;5m      START TO COMMIT THE CODE\033[0m${NC}" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
 echo "\n"
 
