@@ -103,6 +103,7 @@ read -p "Enter the message for committing code  ==> " message
 git commit -m  "$message"
 
 echo "\n"
+echo "${NC}"
 echo "${heading_color}*********************        Push code on git        *********************" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
 echo "\n"
 echo "${text_color}"
@@ -110,6 +111,7 @@ echo "${text_color}"
 git push
 
 echo "\n"
+echo "${NC}"
 echo "${heading_color}********************* Code is Committed Successfully *********************" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
 echo "\n"
 
