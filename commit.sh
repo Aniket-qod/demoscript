@@ -41,6 +41,7 @@ echo "${text_color}"
 git branch
 git pull
 
+echo "${NC}"
 echo "\n"
 echo "${heading_color}*********************      See the Modified File     *********************" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
 echo "\n"
