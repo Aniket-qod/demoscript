@@ -57,6 +57,7 @@ echo "${text_color}"
 read -p "Enter the file which want to commit ==> " file
 
 echo "\n"
+echo "${NC}"
 echo "${heading_color}*********************    Selected files for commit   *********************" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
 echo "\n"
 echo "${text_color}"
@@ -64,6 +65,7 @@ echo "${text_color}"
 echo "Selected file =====> " $file
 
 echo "\n"
+echo "${NC}"
 echo "${heading_color}*********************     Adding files for commit    *********************" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
 echo "\n"
 echo "${text_color}"
