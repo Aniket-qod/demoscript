@@ -1,2 +1,1 @@
-Asskjasdas# demoscript
-kask
+# demoscript
