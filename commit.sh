@@ -84,11 +84,10 @@ while [ $count -lt $total ]; do
 done
 
 echo "\n"
-
+echo "\n"
 git add $file
 
 echo "Added Files =====> "
-echo "\n"
 echo "${text_color}"
 
 git status
