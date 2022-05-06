@@ -1,4 +1,6 @@
 clear
+whiptail --title "Aniket Mudawar" --msgbox "  Welcome to my animated script. Click ok to commit continue ..." 8 70
+
 heading_color='\033[3;1;91m'
 text_color='\033[3;2;96m'
 NC='\033[0m'
