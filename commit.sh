@@ -84,7 +84,6 @@ while [ $count -lt $total ]; do
 done
 
 echo "\n"
-echo "\n"
 
 git add $file
 
