@@ -1,1 +1,1 @@
-# demoscript abc
+# demoscript
