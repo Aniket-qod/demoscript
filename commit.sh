@@ -99,8 +99,8 @@ echo "${heading_color}*********************    Commit code with message    *****
 echo "\n"
 echo "${text_color}"
 
-read -p "Enter the message for committing code  ==> " message
-
+#read -p "Enter the message for committing code  ==> " message
+message=$(whiptail --inputbox "Enter the message for committing code  ==> " 10 30 3>&1 1>&2 2>&3)
 git commit -m  "$message"
 
 echo "\n"
