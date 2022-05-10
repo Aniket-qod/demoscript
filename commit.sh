@@ -1,5 +1,5 @@
 clear
-whiptail --yes-button "Yes" --no-button "No" --title "Choose the answer" --yesno "   Welcome to my animated script. Click on Yes to continue ..." 8 70
+whiptail --yes-button "Yes" --no-button "No" --title "Aniket Mudawar" --yesno "   Welcome to my animated script. Click on Yes to continue ..." 8 70
 
 heading_color='\033[3;1;91m'
 text_color='\033[3;2;96m'
@@ -100,7 +100,7 @@ echo "\n"
 echo "${text_color}"
 
 #read -p "Enter the message for committing code  ==> " message
-message=$(whiptail --inputbox "Enter the message for committing code  ==> " 10 30 3>&1 1>&2 2>&3)
+message=$(whiptail --inputbox "Enter the message for committing code  ==> " 10 70 3>&1 1>&2 2>&3)
 git commit -m  "$message"
 
 echo "\n"
