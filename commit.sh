@@ -24,17 +24,20 @@ spinner() {
     return 0
 }
 
-## simple example with sleep
 sleep 5 &
-
 spinner $!
+
+
 
 clear
 echo "\n"
 echo "\033[96;5m      START TO COMMIT THE CODE\033[0m${NC}" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
 echo "\n"
-
 sleep 3
+
+
+
+
 
 echo "\n"
 echo "${heading_color}*********************         Taking the pull        *********************" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
@@ -45,7 +48,6 @@ git branch
 
 count=0
 total=30
-# pstr="[===========================================]"
 pstr="[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>]"
 
 while [ $count -lt $total ]; do
@@ -59,20 +61,27 @@ echo "\n"
 echo "\n"
 
 git pull
-
-
 sleep 3
-
 echo "${NC}"
+
+
+
+
+
 echo "\n"
 echo "${heading_color}*********************      See the Modified File     *********************" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
 echo "\n"
 echo "${text_color}"
 
 git status
-
-
 sleep 3
+
+
+
+
+
+
+
 
 echo "\n"
 echo "${heading_color}*********************    Add the files for commit    *********************" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
@@ -81,6 +90,13 @@ echo "${text_color}"
 
 read -p "Enter the file which want to commit ==> " file
 
+
+
+
+
+
+
+
 echo "\n"
 echo "${NC}"
 echo "${heading_color}*********************    Selected files for commit   *********************" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
@@ -88,6 +104,12 @@ echo "\n"
 echo "${text_color}"
 
 echo "Selected file =====> " $file
+sleep 3
+
+
+
+
+
 
 echo "\n"
 echo "${NC}"
@@ -114,8 +136,14 @@ echo "Added Files =====> "
 echo "${text_color}"
 
 git status
-
 sleep 3
+
+
+
+
+
+
+
 echo "\n"
 echo "${heading_color}*********************    Commit code with message    *********************" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
 echo "\n"
@@ -124,6 +152,9 @@ echo "${text_color}"
 #read -p "Enter the message for committing code  ==> " message
 message=$(whiptail --inputbox "Enter the message for committing code  ==> " 10 70 3>&1 1>&2 2>&3)
 git commit -m  "$message"
+sleep 3
+
+
 
 echo "\n"
 echo "${NC}"
@@ -132,6 +163,11 @@ echo "\n"
 echo "${text_color}"
 
 git push
+
+
+
+
+
 
 echo "\n"
 echo "${NC}"
