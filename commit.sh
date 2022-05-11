@@ -63,7 +63,7 @@ running_bar
 
 echo "\n"
 
-git pull
+git pull https://Aniket-qod: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@github.com/Aniket-qod/demoscript.git
 sleep 3
 echo "${NC}"
 
@@ -155,8 +155,7 @@ echo "${heading_color}*********************        Push code on git        *****
 echo "\n"
 echo "${text_color}"
 
-git push
-
+git push https://Aniket-qod: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@github.com/Aniket-qod/demoscript.git
 
 
 
