@@ -62,7 +62,6 @@ git branch
 running_bar
 
 echo "\n"
-echo "\n"
 
 git pull
 sleep 3
