@@ -42,7 +42,26 @@ echo "\n"
 echo "${text_color}"
 
 git branch
+
+count=0
+total=30
+# pstr="[===========================================]"
+pstr="[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>]"
+
+while [ $count -lt $total ]; do
+  sleep 0.5 # this is work
+  count=$(( $count + 1 ))
+  pd=$(( $count * 45 / $total ))
+  printf "\r%3d.%1d%% %.${pd}s" $(( $count * 100 / $total )) $(( ($count * 1000 / $total) % 10 )) $pstr
+done
+
+echo "\n"
+echo "\n"
+
 git pull
+
+
+sleep 3
 
 echo "${NC}"
 echo "\n"
@@ -51,6 +70,9 @@ echo "\n"
 echo "${text_color}"
 
 git status
+
+
+sleep 3
 
 echo "\n"
 echo "${heading_color}*********************    Add the files for commit    *********************" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
@@ -75,7 +97,6 @@ echo "${text_color}"
 
 count=0
 total=30
-# pstr="[===========================================]"
 pstr="[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>]"
 
 while [ $count -lt $total ]; do
@@ -94,6 +115,7 @@ echo "${text_color}"
 
 git status
 
+sleep 3
 echo "\n"
 echo "${heading_color}*********************    Commit code with message    *********************" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
 echo "\n"
@@ -115,4 +137,3 @@ echo "\n"
 echo "${NC}"
 echo "${heading_color}********************* Code is Committed Successfully *********************" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
 echo "\n"
-
