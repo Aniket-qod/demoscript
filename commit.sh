@@ -24,6 +24,20 @@ spinner() {
     return 0
 }
 
+running_bar(){
+
+    count=0
+    total=30
+    pstr="[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>]"
+
+    while [ $count -lt $total ]; do
+      sleep 0.5 # this is work
+      count=$(( $count + 1 ))
+      pd=$(( $count * 45 / $total ))
+      printf "\r%3d.%1d%% %.${pd}s" $(( $count * 100 / $total )) $(( ($count * 1000 / $total) % 10 )) $pstr
+    done
+}
+
 sleep 5 &
 spinner $!
 
@@ -45,17 +59,7 @@ echo "\n"
 echo "${text_color}"
 
 git branch
-
-count=0
-total=30
-pstr="[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>]"
-
-while [ $count -lt $total ]; do
-  sleep 0.5 # this is work
-  count=$(( $count + 1 ))
-  pd=$(( $count * 45 / $total ))
-  printf "\r%3d.%1d%% %.${pd}s" $(( $count * 100 / $total )) $(( ($count * 1000 / $total) % 10 )) $pstr
-done
+running_bar
 
 echo "\n"
 echo "\n"
@@ -116,17 +120,7 @@ echo "${NC}"
 echo "${heading_color}*********************     Adding files for commit    *********************" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
 echo "\n"
 echo "${text_color}"
-
-count=0
-total=30
-pstr="[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>]"
-
-while [ $count -lt $total ]; do
-  sleep 0.5 # this is work
-  count=$(( $count + 1 ))
-  pd=$(( $count * 45 / $total ))
-  printf "\r%3d.%1d%% %.${pd}s" $(( $count * 100 / $total )) $(( ($count * 1000 / $total) % 10 )) $pstr
-done
+running_bar
 
 echo "\n"
 echo "\n"
