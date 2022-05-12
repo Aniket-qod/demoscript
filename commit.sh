@@ -61,9 +61,10 @@ echo "${text_color}"
 git branch
 running_bar
 
-echo "\n"
+token=$(whiptail --title "   Token   " --inputbox " \n Enter the git token for committing code  ==> " 10 70 3>&1 1>&2 2>&3)
 
-git pull https://Aniket-qod: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@github.com/Aniket-qod/demoscript.git
+echo "\n"
+git pull https://Aniket-qod:$token@github.com/Aniket-qod/demoscript.git
 sleep 3
 echo "${NC}"
 
@@ -154,7 +155,7 @@ echo "${heading_color}*********************        Push code on git        *****
 echo "\n"
 echo "${text_color}"
 
-git push https://Aniket-qod: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@github.com/Aniket-qod/demoscript.git
+git push https://Aniket-qod:$token@github.com/Aniket-qod/demoscript.git
 
 
 
