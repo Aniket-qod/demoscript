@@ -39,8 +39,9 @@ running_bar(){
 }
 
 sleep 5 &
-spinner $!
-
+echo "📡📡📡📡📡📡📡📡📡📡"; 
+echo "\n"
+spinner $! 
 
 
 clear
@@ -57,11 +58,15 @@ echo "\n\n"
 echo "${heading_color}*********************         Taking the pull        *********************" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
 echo "\n"
 echo "${text_color}"
+sleep 3
 
 git branch
-running_bar
+sleep 3
 
 token=$(whiptail --title "   Token   " --inputbox " \n Enter the git token for committing code  ==> " 10 70 3>&1 1>&2 2>&3)
+
+running_bar
+
 
 echo "\n"
 git pull https://Aniket-qod:$token@github.com/Aniket-qod/demoscript.git
