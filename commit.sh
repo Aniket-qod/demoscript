@@ -5,7 +5,7 @@ heading_color='\033[3;1;91m'
 text_color='\033[3;2;96m'
 NC='\033[0m'
 
-echo "\n"
+echo "\n\n"
 
 spinner() {
     local PROC="$1"
@@ -121,8 +121,7 @@ echo "\n"
 echo "${text_color}"
 running_bar
 
-echo "\n"
-echo "\n"
+echo "\n\n"
 git add $file
 
 echo "Added Files =====> "
@@ -164,4 +163,4 @@ whiptail --title "   Congratulations   " --msgbox "   The code is committed succ
 echo "\n"
 echo "${NC}"
 echo "${heading_color}********************* Code is Committed Successfully *********************" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
-echo "\n"
+echo "\n\n\n\n"
