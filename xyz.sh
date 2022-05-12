@@ -1,9 +1,10 @@
-whiptail --title "Example Dialog" --msgbox "This is an example of a message box. You must hit OK to continue." 8 78
+#whiptail --title "   Congratulations   " --msgbox "   The code is committed successfully on git ...... 🎉🎉🎉🎉🎉🎉" 8 70
 
+whiptail --yes-button "Yes" --no-button "No" --title "Aniket Mudawar" --yesno "   Welcome to my animated script. Click on Yes to continue ..." 8 70
 
 
 IP_MSG="$(curl --no-progress-meter http://ifconfig.io 2>&1)"
-STATUS=$? 
+STATUS=$?
 
 if [ $STATUS -ne 0 ]; then
     MESSAGE="Error Occurred! [ $IP_MSG ]"

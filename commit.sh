@@ -1,5 +1,5 @@
 clear
-whiptail --yes-button "Yes" --no-button "No" --title "Aniket Mudawar" --yesno "   Welcome to my animated script. Click on Yes to continue ..." 8 70
+whiptail --title "   Aniket Mudawar   " --msgbox "   Welcome to my animated script. Click on OK to continue ......" 8 70
 
 heading_color='\033[3;1;91m'
 text_color='\033[3;2;96m'
@@ -45,7 +45,7 @@ spinner $!
 
 clear
 echo "\n"
-echo "\033[96;5m      START TO COMMIT THE CODE\033[0m${NC}" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
+echo "\033[96;5m  🌟🌟🌟🌟🌟     START TO COMMIT THE CODE     🌟🌟🌟🌟🌟\033[0m${NC}" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
 echo "\n"
 sleep 3
 
@@ -160,7 +160,7 @@ git push https://Aniket-qod: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@github.com/
 
 
 
-
+whiptail --title "   Congratulations   " --msgbox "   The code is committed successfully on git ...... 🎉🎉🎉🎉🎉🎉" 8 70
 echo "\n"
 echo "${NC}"
 echo "${heading_color}********************* Code is Committed Successfully *********************" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
