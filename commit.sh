@@ -63,7 +63,7 @@ running_bar
 
 echo "\n"
 
-git pull https://Aniket-qod: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@github.com/Aniket-qod/demoscript.git
+git pull https://Aniket-qod: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@github.com/Aniket-qod/demoscript.git
 sleep 3
 echo "${NC}"
 
@@ -143,7 +143,7 @@ echo "\n"
 echo "${text_color}"
 
 #read -p "Enter the message for committing code  ==> " message
-message=$(whiptail --inputbox "Enter the message for committing code  ==> " 10 70 3>&1 1>&2 2>&3)
+message=$(whiptail --title "   Message   " --inputbox " \n Enter the message for committing code  ==> " 10 70 3>&1 1>&2 2>&3)
 git commit -m  "$message"
 sleep 3
 
@@ -155,7 +155,7 @@ echo "${heading_color}*********************        Push code on git        *****
 echo "\n"
 echo "${text_color}"
 
-git push https://Aniket-qod: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@github.com/Aniket-qod/demoscript.git
+git push https://Aniket-qod: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@github.com/Aniket-qod/demoscript.git
 
 
 
