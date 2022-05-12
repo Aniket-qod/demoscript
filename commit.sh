@@ -45,7 +45,7 @@ spinner $!
 
 clear
 echo "\n"
-echo "\033[96;5m  🌟🌟🌟🌟🌟     START TO COMMIT THE CODE     🌟🌟🌟🌟🌟\033[0m${NC}" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
+echo "\033[96;5m🌟🌟🌟🌟🌟     START TO COMMIT THE CODE     🌟🌟🌟🌟🌟\033[0m${NC}" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
 echo "\n"
 sleep 3
 
