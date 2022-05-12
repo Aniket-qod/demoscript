@@ -53,7 +53,7 @@ sleep 3
 
 
 
-echo "\n"
+echo "\n\n"
 echo "${heading_color}*********************         Taking the pull        *********************" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
 echo "\n"
 echo "${text_color}"
@@ -63,7 +63,7 @@ running_bar
 
 echo "\n"
 
-git pull https://Aniket-qod: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@github.com/Aniket-qod/demoscript.git
+git pull https://Aniket-qod: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@github.com/Aniket-qod/demoscript.git
 sleep 3
 echo "${NC}"
 
@@ -154,13 +154,11 @@ echo "${heading_color}*********************        Push code on git        *****
 echo "\n"
 echo "${text_color}"
 
-git push https://Aniket-qod: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@github.com/Aniket-qod/demoscript.git
+git push https://Aniket-qod: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@github.com/Aniket-qod/demoscript.git
 
 
 
-
-whiptail --title "   Congratulations   " --msgbox "   The code is committed successfully on git ...... 🎉🎉🎉🎉🎉🎉" 8 70
 echo "\n"
 echo "${NC}"
-echo "${heading_color}********************* Code is Committed Successfully *********************" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
+echo "${heading_color}⭐⭐⭐ ********************* Code is Committed Successfully ********************* ⭐⭐⭐" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
 echo "\n\n\n\n"
