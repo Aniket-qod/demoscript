@@ -161,5 +161,5 @@ git push https://Aniket-qod:$token@github.com/Aniket-qod/demoscript.git
 
 echo "\n"
 echo "${NC}"
-echo "${heading_color}⭐⭐⭐ ********************* Code is Committed Successfully ********************* ⭐⭐⭐" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
+echo "${heading_color}********************* Code is Committed Successfully *********************" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
 echo "\n\n\n\n"
