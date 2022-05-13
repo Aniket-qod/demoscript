@@ -65,7 +65,6 @@ git branch
 sleep 3
 
 token=$(whiptail --title "   Token   " --inputbox " \n Enter the git token for committing code  ==> " 10 70 3>&1 1>&2 2>&3)
-echo "\n"
 running_bar
 
 
