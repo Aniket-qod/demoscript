@@ -1,6 +1,7 @@
 clear
 whiptail --title "   Aniket Mudawar   " --msgbox "   Welcome to my animated script. Click on OK to continue ......" 8 70
 
+emoji='😜😜'
 heading_color='\033[3;1;91m'
 text_color='\033[3;2;96m'
 NC='\033[0m'
@@ -64,7 +65,7 @@ git branch
 sleep 3
 
 token=$(whiptail --title "   Token   " --inputbox " \n Enter the git token for committing code  ==> " 10 70 3>&1 1>&2 2>&3)
-
+echo "${emoji}\n"
 running_bar
 
 
@@ -79,7 +80,7 @@ echo "${NC}"
 
 echo "\n"
 echo "${heading_color}*********************      See the Modified File     *********************" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
-echo "\n"
+echo "\n${emoji}\n"
 echo "${text_color}"
 
 git status
@@ -94,7 +95,7 @@ sleep 3
 
 echo "\n"
 echo "${heading_color}*********************    Add the files for commit    *********************" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
-echo "\n"
+echo "\n${emoji}\n"
 echo "${text_color}"
 
 read -p "Enter the file which want to commit ==> " file
@@ -109,7 +110,7 @@ read -p "Enter the file which want to commit ==> " file
 echo "\n"
 echo "${NC}"
 echo "${heading_color}*********************    Selected files for commit   *********************" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
-echo "\n"
+echo "\n${emoji}\n"
 echo "${text_color}"
 
 echo "Selected file =====> " $file
@@ -123,7 +124,7 @@ sleep 3
 echo "\n"
 echo "${NC}"
 echo "${heading_color}*********************     Adding files for commit    *********************" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
-echo "\n"
+echo "\n${emoji}\n"
 echo "${text_color}"
 running_bar
 
@@ -144,7 +145,7 @@ sleep 3
 
 echo "\n"
 echo "${heading_color}*********************    Commit code with message    *********************" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
-echo "\n"
+echo "\n${emoji}\n"
 echo "${text_color}"
 
 #read -p "Enter the message for committing code  ==> " message
@@ -157,7 +158,7 @@ sleep 3
 echo "\n"
 echo "${NC}"
 echo "${heading_color}*********************        Push code on git        *********************" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
-echo "\n"
+echo "\n${emoji}\n"
 echo "${text_color}"
 
 git push https://Aniket-qod:$token@github.com/Aniket-qod/demoscript.git
