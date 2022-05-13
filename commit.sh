@@ -57,7 +57,7 @@ sleep 3
 
 echo "\n\n"
 echo "${heading_color}*********************         Taking the pull        *********************" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
-echo "\n${emoji}"
+echo "\n${emoji}\n"
 echo "${text_color}"
 sleep 3
 
