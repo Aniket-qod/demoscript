@@ -1,7 +1,7 @@
 clear
 whiptail --title "   Aniket Mudawar   " --msgbox "   Welcome to my animated script. Click on OK to continue ......" 8 70
 
-emoji='😜😜'
+emoji='\033[3;1;96m😜 😜'
 heading_color='\033[3;1;91m'
 text_color='\033[3;2;96m'
 NC='\033[0m'
