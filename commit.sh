@@ -57,7 +57,7 @@ sleep 3
 
 echo "\n\n"
 echo "${heading_color}*********************         Taking the pull        *********************" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
-echo "\n"
+echo "\n${emoji}"
 echo "${text_color}"
 sleep 3
 
@@ -65,7 +65,7 @@ git branch
 sleep 3
 
 token=$(whiptail --title "   Token   " --inputbox " \n Enter the git token for committing code  ==> " 10 70 3>&1 1>&2 2>&3)
-echo "${emoji}\n"
+echo "\n"
 running_bar
 
 
