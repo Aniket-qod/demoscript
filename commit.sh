@@ -54,7 +54,7 @@ sleep 5 &
 echo "📡📡📡📡📡📡📡📡📡📡";
 echo "\n"
 spinner $!
-progress_bar
+
 
 clear
 echo "\n"
@@ -76,7 +76,7 @@ git branch
 sleep 3
 
 token=$(whiptail --title "   Token   " --inputbox " \n Enter the git token for committing code  ==> " 10 70 3>&1 1>&2 2>&3)
-running_bar
+progress_bar
 
 
 echo "\n"
@@ -136,7 +136,7 @@ echo "${NC}"
 echo "${heading_color}*********************     Adding files for commit    *********************" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
 echo "\n${emoji}\n"
 echo "${text_color}"
-running_bar
+progress_bar
 
 echo "\n\n"
 git add $file
