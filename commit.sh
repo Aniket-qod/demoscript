@@ -39,11 +39,22 @@ running_bar(){
     done
 }
 
-sleep 5 &
-echo "📡📡📡📡📡📡📡📡📡📡"; 
-echo "\n"
-spinner $! 
+progress_bar(){
 
+    for i in $(seq 1 100)
+    do
+        sleep 0.1 
+        echo $i
+    done | whiptail --title 'Test script' --gauge 'Script loading...' 6 60 0
+
+
+}
+
+sleep 5 &
+echo "📡📡📡📡📡📡📡📡📡📡";
+echo "\n"
+spinner $!
+progress_bar
 
 clear
 echo "\n"
