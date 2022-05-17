@@ -39,13 +39,24 @@ running_bar(){
     done
 }
 
-progress_bar(){
+progress_bar1(){
 
     for i in $(seq 1 100)
     do
         sleep 0.1 
         echo $i
-    done | whiptail --title 'Test script' --gauge 'Script loading...' 6 60 0
+    done | whiptail --title 'Git Pull' --gauge 'git pull running ....' 6 60 0
+
+
+}
+
+progress_bar2(){
+
+    for i in $(seq 1 100)
+    do
+        sleep 0.1 
+        echo $i
+    done | whiptail --title 'Git Add' --gauge 'Adding file ....' 6 60 0
 
 
 }
@@ -76,10 +87,9 @@ git branch
 sleep 3
 
 token=$(whiptail --title "   Token   " --inputbox " \n Enter the git token for committing code  ==> " 10 70 3>&1 1>&2 2>&3)
-progress_bar
+progress_bar1
 
 
-echo "\n"
 git pull https://Aniket-qod:$token@github.com/Aniket-qod/demoscript.git
 sleep 3
 echo "${NC}"
@@ -136,9 +146,8 @@ echo "${NC}"
 echo "${heading_color}*********************     Adding files for commit    *********************" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
 echo "\n${emoji}\n"
 echo "${text_color}"
-progress_bar
+progress_bar2
 
-echo "\n\n"
 git add $file
 
 echo "Added Files =====> "
