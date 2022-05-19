@@ -133,7 +133,7 @@ echo "${heading_color}*********************    Selected files for commit   *****
 echo "\n${emoji}\n"
 echo "${text_color}"
 
-echo "Selected file =====> " $file
+echo "Selected files  =======> " $file
 sleep 3
 
 
@@ -150,7 +150,7 @@ progress_bar2
 
 git add $file
 
-echo "Added Files =====> "
+echo "Added Files     =======> "
 echo "${text_color}"
 
 git status
@@ -170,6 +170,10 @@ echo "${text_color}"
 #read -p "Enter the message for committing code  ==> " message
 message=$(whiptail --title "   Message   " --inputbox " \n Enter the message for committing code  ==> " 10 70 3>&1 1>&2 2>&3)
 git commit -m  "$message"
+
+echo "\n"
+echo "Entered message =======> " $message
+
 sleep 3
 
 
