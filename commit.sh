@@ -86,11 +86,11 @@ sleep 3
 git branch
 sleep 3
 
-token=$(whiptail --title "   Token   " --inputbox " \n Enter the git token for committing code  ==> " 10 70 3>&1 1>&2 2>&3)
+user_name=$(whiptail --title "   Username   " --inputbox " \n Enter the git Username for committing code  ==> " 10 70 3>&1 1>&2 2>&3)
+token=$(whiptail --title "   Token   " --inputbox " \n Enter the git Token for committing code  ==> " 10 70 3>&1 1>&2 2>&3)
 progress_bar1
 
-
-git pull https://Aniket-qod:$token@github.com/Aniket-qod/demoscript.git
+git pull https://$user_name:$token@github.com/Aniket-qod/script.git
 sleep 3
 echo "${NC}"
 
@@ -184,7 +184,7 @@ echo "${heading_color}*********************        Push code on git        *****
 echo "\n${emoji}\n"
 echo "${text_color}"
 
-git push https://Aniket-qod:$token@github.com/Aniket-qod/demoscript.git
+git push https://$user_name:$token@github.com/Aniket-qod/script.git
 
 
 
