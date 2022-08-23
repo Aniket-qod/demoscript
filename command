@@ -32,6 +32,13 @@ Ubuntu upgrade through terminal file change
         sudo nano /etc/update-manager/release-upgrades
 
 
+Gnome Animation extension
+
+Burn my windows
+Coverflow Alt + Tab
+Compize windows effect
+Compiz alike magic lamp effect
+
 
 
 ----------------------------------------------------
