@@ -120,3 +120,15 @@ Wifi password show and file
 sudo cat /etc/NetworkManager/system-connections/<WiFi_Network_Name>.nmconnection
 
 nmcli device wifi show-password
+
+
+----------------------------------------------------------------------------------------------------------
+
+Bluetooth command 
+
+hcitool dev                        -- Checking for devices
+hcitool -i <name of device> scan   -- To scan the device
+
+bluetoothctl
+
+connect mac_address                -- For connecting the device
