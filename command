@@ -147,12 +147,35 @@ AWS setup packeages installation
 
 
 git        -->  sudo apt-get install git -y
+curl       -->  sudo apt-get install curl -y
 mysql      -->  sudo apt-get install mysql -y
 nginx      -->  sudo apt-get install nginx -y
 nodejs     -->  sudo apt-get install nodejs -y
 apache2    -->  sudo apt-get install apache2 -y
 
-nvm
-git clone 
+NVM installation
 
+      curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash 
+
+      export NVM_DIR="$HOME/.nvm"
+
+      [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+      [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+      source ~/.bashrc
+
+      nvm ls 
+
+      nvm install v14.21.3
+
+      nvm use v14.21.3
+
+GIT setup 
+
+    git config --global user.name ""
+
+    git config --global user.email ""
+
+    git clone <clone_url>
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
