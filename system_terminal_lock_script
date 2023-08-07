@@ -50,14 +50,7 @@ cont(){
   fi
 }
 
-
-if [ $(date "+%H") -eq 10 ]
-then
-    password
-    cont
-fi
-
-if [ $(date "+%H") -gt 10 -a $(date "+%H") -lt 20 ]
+if [ $(date "+%H") -ge 10 -a $(date "+%H") -lt 20 ]
 then
     password
     cont
