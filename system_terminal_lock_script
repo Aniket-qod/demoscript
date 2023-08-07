@@ -1,19 +1,15 @@
 locked(){
-
   if [ $(date "+%H") -lt 10 ]
   then
-	whiptail --title "Locked Terminal" --msgbox "Terminal is locked now. It will start on 10:00 AM. " 8 78
-	locked
+      whiptail --title "Locked Terminal" --msgbox "Terminal is locked now. It will start on 10:00 AM. " 8 78
+      locked
   fi
 
   if [ $(date "+%H") -gt 20 ]
   then
-	whiptail --title "Locked Terminal" --msgbox "Your working hour is completed. It will accessible on tommorroe 10:00 AM. " 8 78
-	locked
+      whiptail --title "Locked Terminal" --msgbox "Your working hour is completed. It will accessible on tommorroe 10:00 AM. " 8 78
+      locked
   fi
-
- #whiptail --title "Locked Terminal" --msgbox "Terminal is locked now. It will start on 10:00AM Tomorrow. " 8 78
- #locked
 }
 
 password(){
@@ -21,7 +17,6 @@ password(){
 }
 
 progress_bar1(){
-
   for i in $(seq 1 100)
    do
      sleep 0.1
@@ -29,36 +24,38 @@ progress_bar1(){
    done | whiptail --title 'Animation' --gauge ' Animation setup script running .... ' 6 60 2
 }
 
-
 cont(){
-if [ $a -eq 123 ]
-then
-  whiptail --title "Password Verified" --msgbox "Go ahead with Animated Terminal " 8 78
-  progress_bar1
-  sl | lolcat
-  sleep 1
-  clear
-  sleep 1
-  #neofetch #--chafa_distro /home/admin1/Videos/logo_tizen.png
+  if [ $a -eq 123 ]
+  then
+    whiptail --title "Password Verified" --msgbox "Go ahead with Animated Terminal " 8 78
+    progress_bar1
+    sl | lolcat
+    sleep 1
+    clear
+    sleep 1
+    #neofetch #--chafa_distro /home/admin1/Videos/logo_tizen.png
 
-  echo "\n"
-  echo "\033[3;1;96;5m🌟🌟    WELCOME TO ANIMATED TERMINAL    🌟🌟\033[0m${NC}" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
-  echo "\n\n"
+    echo "\n"
+    echo "\033[3;1;96;5m🌟🌟    WELCOME TO ANIMATED TERMINAL    🌟🌟\033[0m${NC}" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
+    echo "\n\n"
 
-  sleep 1
-  echo "-^-^-^-^-^-  -^-^-^-^-^-  -^-^-^-^-^-  -^-^-^-^-^-  -^-^-^-^-^-  -^-^-^-^-^-  -^-^-^-^-^-  -^-^-^-^-^-  -^-^-^-^-^-" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols) | lolcat
-  echo "\n\n"
-
-  sleep 1
-
-else
-  whiptail --title "Wrong Password" --msgbox "      Password is Incorrect ........" 8 60
-  password
-  cont
-fi
-
+    sleep 1
+    echo "-^-^-^-^-^-  -^-^-^-^-^-  -^-^-^-^-^-  -^-^-^-^-^-  -^-^-^-^-^-  -^-^-^-^-^-  -^-^-^-^-^-  -^-^-^-^-^-  -^-^-^-^-^-" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols) | lolcat
+    echo "\n\n"
+    sleep 1
+  else
+    whiptail --title "Wrong Password" --msgbox "      Password is Incorrect ........" 8 60
+    password
+    cont
+  fi
 }
 
+
+if [ $(date "+%H") -eq 10 ]
+then
+    password
+    cont
+fi
 
 if [ $(date "+%H") -gt 10 -a $(date "+%H") -lt 20 ]
 then
