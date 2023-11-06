@@ -91,12 +91,13 @@ PROJECTS
 3. Dsfr
 4. Warranty
 5. Pepsi_ai_analytics
+6. Haat
 
-6. Shiffer 
-7. SportDoller
-8. EFF
-9. Georgie & Toms
-10. Celigo & oracle
+1. Shiffer 
+2. SportDoller
+3. EFF
+4. Georgie & Toms
+5. Celigo & oracle
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
